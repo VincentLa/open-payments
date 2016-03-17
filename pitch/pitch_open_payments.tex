@@ -1,0 +1,116 @@
+\documentclass{beamer}
+\def\Put(#1,#2)#3{\leavevmode\makebox(0,0){\put(#1,#2){#3}}}
+\usepackage{tabularx, booktabs}
+\usetheme{Frankfurt}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{pdfpages}
+
+
+\captionsetup[table]{labelformat = empty}
+\setbeamertemplate{navigation symbols}{} % Suppress the navigation symbols that normally appear on the bottom of Beamer slides
+
+% Redefine the footer to three-panel split with Author | Title | Slide number instead of Warsaw default
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor%~~\beamer@ifempty{\insertshortinstitute}{}{(\insertshortinstitute)}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+   % \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+
+
+\title{Open Payments: Financial Transparency Between Medical Providers and Manufacturers}
+\author{Vincent La}
+\institute{Code for San Francisco}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+\label{Overview}
+\frametitle{Overview}
+What is Open Payments?
+\begin{enumerate}
+\item[1.] Program created by the Affordable Care Act to increase transparency of payments to medical providers from manufacturers
+\newline
+\item[2.] Financial Conflicts of Interests for Medical Providers
+%This includes gifts, meals, drug samples. Promotional speakers for the company
+\newline
+\item[3.] Summary Statistics (2014)\footnote{https://openpaymentsdata.cms.gov/summary}
+
+\begin{itemize}
+\item \$6.45 Billion total payments
+\item 607,000 Providers
+\item 1,122 Teaching Hospitals
+\end{itemize}
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Why do we care? A Real Life Example: Vioxx (Merck)}
+Financial Conflict of Interests $\Rightarrow$ Clinical Trials?\footnote{http://www.jabfm.org/content/18/5/414.full.pdf}
+\begin{enumerate}
+\item Approved 1999 by the FDA, Vioxx treated patients with arthritis and other conditions causing chronic or acute pain
+\item Prescribed to over 80 million patients
+\item Study published in NEJM, submitted to the FDA, failed to report patients taking Vioxx were 21\% more likely to develop serious illnesses than patients taking the generic counterpart
+\item \textbf{All 13 authors had financial ties or were employed by Merck.}
+\item Summary of timeline of events\footnote{http://www.npr.org/templates/story/story.php?storyId=5470430}
+\end{enumerate}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Why do we care?}
+Financial Conflict of Interests $\Rightarrow$ Medical Practice?
+\begin{enumerate}
+\item In a survey of 3,100 physicians, 94\% report some financial relationship with industry in the previous year.\footnote{http://www.ncbi.nlm.nih.gov/books/NBK22944/}
+
+\begin{enumerate}
+\item Meals: 83\%
+\item Drug Samples: 78\%
+\item Industry Reimbursement for professional meetings: 35\%
+\item Consulting/Speaking Fees/Clinical Trials: 28\%
+\end{enumerate}
+
+\item Transfers exceeding \$1000 from a pharmaceutical company to a physician resulted in 60 additional prescriptions per year by that physician for drugs manufactured by the company.\footnote{http://rady.ucsd.edu/faculty/directory/engelberg/pub/portfolios/doctors.pdf}
+\end{enumerate}
+\end{frame}
+
+\begin{frame} 
+\frametitle{What can we do?}
+\begin{enumerate}
+\item Open Payments Data: https://www.cms.gov/OpenPayments/Explore-the-Data/Data-Overview.html
+\item Build a Search Tool: Better lookup tool (by NPI, geographic location, physician specialty, etc.)
+\item \textbf{Data Visualization}
+\end{enumerate}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Project Idea: Data Visualization}
+While CMS's provided search tool could use better features, I think there's a lot of opportunity for interesting data visualizations.
+
+\begin{enumerate}
+\item Create a heat map showing payment ``hot spots" geographically at a general level
+\item At a local level, allow people to zoom into a certain geographical area and show a list of actual providers with the amount of money they receive from manufacturers (think Zillow map of house values)
+\textbf{Goal: Better information dissemination; allow patients to better shop around for high-value care!}
+\item Example of some data visualizations with healthcare data: http://www.dartmouthatlas.org/
+\end{enumerate}
+\end{frame}
+
+\end{document}
