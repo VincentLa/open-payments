@@ -1,3 +1,5 @@
+# Open Payments
+
 This repository will host project related to Center of Medicare and Medicaid Services (CMS)'s Open Payments program: https://www.cms.gov/openpayments/
 
 Open Payments is a program that was initialized by the Affordable Care Act aimed to increase public awareness of financial relationships between drug and device manufacturers and certain health care providers. 
