@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 hellomaster
 test
 test
 test
 hi
 hi
+=======
+hello
+>>>>>>> master
