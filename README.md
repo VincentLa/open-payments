@@ -11,3 +11,5 @@ In this repository, we will build out data visualizations or search tool(s) to b
 3. Start with something like a heat map showing payment "hot spots" geographically, and then let people zoom in until at some point they see a list of actual providers and the money they get (and can be done various ways, e.g. by the payer, or by type of provider, etc...)? So at a big picture level you would see something like a map, and at the granular level it would be something more like a zillow map of house values.
 
 Example of Geographical Heat Maps with Healthcare Data: http://www.dartmouthatlas.org/
+
+Medicare Data (Big Query): https://cloud.google.com/bigquery/public-data/medicare
